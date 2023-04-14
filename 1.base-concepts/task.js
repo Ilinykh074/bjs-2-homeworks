@@ -12,11 +12,11 @@ function solveEquation(a, b, c) {
 }
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-	
+  
   if ((isNaN(percent)) || (isNaN(contribution)) || (isNaN(amount)) || (isNaN(countMonths))) {
 		return false;
   }
-  
+
   percent = percent / 100 / 12;
   let bodyCredite = amount - contribution;
   let payment = bodyCredite * (percent + (percent / (((1 + percent) ** countMonths) - 1)));
